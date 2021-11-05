@@ -88,6 +88,6 @@ fi
 
 
 
-
+sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.7 0
 echo "Done with python installation...."
 exit
