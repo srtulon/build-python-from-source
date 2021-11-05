@@ -43,11 +43,11 @@ echo "Updating directory for building python"
 
 cd $userpath
 
-wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
+wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
 
-tar xzf Python-3.6.9.tgz
+tar xzf Python-3.7.4.tgz
 echo changing directory
-cd Python-3.6.9
+cd Python-3.7.4
 
 echo Compiling python please wait
 ./configure --enable-optimizations
@@ -56,7 +56,7 @@ echo building python
 make altinstall
 
 echo Done updating... Verifying installation from python version
-python3.6 -V
+python3.7 -V
 
 read -p "Do you want to upgrade pip?(y/N)" decision
 
@@ -74,11 +74,11 @@ cd ~/
 wget https://bootstrap.pypa.io/get-pip.py
 
 echo "Installing pip....."
-python3.6 get-pip.py
+python3.7 get-pip.py
 
 
 echo "Done with pip verifying pip installation from its version..."
-pip3.6 -V
+pip3.7 -V
 
 read -p "Do you want to me to update python path in bashrc file for running python3.6 using python command directly?(y/N)" decision
 
@@ -86,8 +86,7 @@ if [ "$decision" != "Y" ] && [ "$decision" != "y" ]; then
     exit
 fi
 
-echo 'alias python=python3.6' >> ~/.bashrc
-echo 'alias pip=pip3.6' >> ~/.bashrc
+
 
 
 echo "Done with python installation...."
